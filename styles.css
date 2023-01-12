@@ -1,0 +1,147 @@
+:root {
+    --glowStart: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #2e00e6, 0 0 40px #6300e6, 0 0 50px #c300e6, 0 0 60px #e200e6, 0 0 70px #e600ca;
+    --glowEnd: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.backgroundImg {
+    background-image: url(https://wallpaper.dog/large/20374212.jpg);
+    filter: blur(15px);
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+    background-repeat: none;
+}
+
+.title {
+    display: block;
+    text-align: center;
+}
+
+.magicTitle {
+    font-size: 5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+    padding-top: 20px;
+    color: rgb(255, 255, 255);
+    -webkit-animation: magicTitle 1s ease-in-out infinite alternate;
+    -moz-animation: magicTitle 1s ease-in-out infinite alternate;
+    animation: magicTitle 1s ease-in-out infinite alternate;
+    user-select: none;
+}
+
+@keyframes magicTitle {
+    0% {
+    text-shadow: var(--glowStart);
+
+  }
+    
+    100% {
+    text-shadow: var(--glowEnd);
+    }
+  }
+
+.title h3 {
+    font-size: 1.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+    color: white;
+    user-select: none;
+    text-shadow: 0px 0px 13px #000000;
+}
+
+.buttonArea {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 40px;
+}
+
+button {
+    height: 50px;
+    width: 150px;
+    user-select: none;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+    font-weight: bolder;
+}
+
+.defaultTheme {
+    background-color: #7b60e8;
+}
+
+.defaultTheme:hover {
+    background-color: #b6a8f1;
+}
+
+.classyTheme {
+    background-color: #ea8348;
+}
+
+.classyTheme:hover {
+    background-color: #ebb08d;
+}
+
+.forestTheme {
+    background-color: #59eaab;
+}
+
+.forestTheme:hover {
+    background-color: #aaeace;
+}
+
+.centerBall {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.magicBallArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+}
+
+.ball {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.number {
+    height: 120px;
+    width: 120px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    text-align: center;
+    margin-top: -70px;
+    font-size: 100px;
+    font-family: 'Lucida Sans', Verdana;
+    user-select: none;
+}
+
+#result {
+    font-size: 2.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+    user-select: none;
+    text-shadow: 0px 0px 13px #000000;
+}
