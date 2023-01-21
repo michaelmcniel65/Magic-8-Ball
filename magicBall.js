@@ -1,11 +1,28 @@
 const ballOptions = ['ABSOLUTELY', 'DEFINITELY NOT', 'YES', 'NO', 'PROBABLY', 'PROBABLY NOT', 'PERHAPS', 'NOT SURE. TRY ASKING AGAIN!'];
+let firstClick = false;
+let usedChoice = [];
 
 function ballShake() {
-    const shake = Math.floor(Math.random() * ballOptions.length);
-    let reAdd = ballOptions.splice(shake, 1);
-    document.getElementById("result").innerText = reAdd;
-    console.log(reAdd);
-    ballOptions.push(reAdd);
+    if (firstClick = false) {
+        const shake = Math.floor(Math.random() * ballOptions.length);
+        const reAdd = ballOptions.splice(shake, 1);
+        usedChoice.push(reAdd);
+        document.getElementById("result").innerText = usedChoice;
+        console.log(usedChoice);
+        firstClick = true;
+        return;
+    }
+
+    if (firstClick = true) {
+        const shake = Math.floor(Math.random() * ballOptions.length);
+        const reAdd = ballOptions.splice(shake, 1);
+        ballOptions.push(...usedChoice);
+        usedChoice.splice(0, 1);
+        usedChoice.push(reAdd);
+        document.getElementById("result").innerText = usedChoice;
+        console.log(usedChoice);
+        return;
+    }
 };
 
 function normalTheme() {
@@ -28,3 +45,4 @@ function forestTheme() {
     document.getElementById("back").style.backgroundImage = 'url(https://th.bing.com/th/id/R.6f5e2cf54d6f1e8705d368b88a5cd67d?rik=UGWRJUXaGEa5MA&pid=ImgRaw&r=0)';
     document.getElementById("ball").style.backgroundColor = 'rgb(1, 58, 6)';
 }
+
